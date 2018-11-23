@@ -26,13 +26,6 @@ BINARY = main
 
 # Obj files to be built <- add .o for any .c files you add!
 OBJS  = $(BINARY).o
-OBJS += lib/usart.o
-OBJS += lib/iopins.o
-OBJS += lib/spi.o
-OBJS += lib/adc.o
-
-# Dirs with header files
-INCL_DIRS = . lib/
 
 # Pre-defined macros
 DEFS = -DF_CPU=$(F_CPU)UL
@@ -112,7 +105,6 @@ size: elf
 # Clean all produced trash
 clean:
 	rm -f $(JUNK)
-	cd lib && rm -f $(JUNK)
 
 
 ## === avrdude ===

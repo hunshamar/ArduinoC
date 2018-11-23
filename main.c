@@ -27,7 +27,7 @@ void main()
 	// globally enable interrupts (for the USART_RX handler)
 	//sei();
 
-	int pin = PD3;
+	int pin = PD1;
 
 	DDRD |= (1 << pin);
 
