@@ -8,7 +8,7 @@
 void main()
 {
 
-	int pin = 4;
+	int pin = 9;
 
 	digital_pin_set_as_output(pin);
 
