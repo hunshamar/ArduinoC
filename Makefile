@@ -26,6 +26,7 @@ BINARY = main
 
 # Obj files to be built <- add .o for any .c files you add!
 OBJS  = $(BINARY).o
+OBJS += led.o
 
 # Pre-defined macros
 DEFS = -DF_CPU=$(F_CPU)UL

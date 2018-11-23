@@ -1,7 +1,6 @@
-#include <avr/io.h>          // register definitions
-#include <util/delay.h>      // delay functions
 
 
+#include "led.h"
 
 // Pins
 //#define LED 13
@@ -27,19 +26,5 @@ void main()
 	// globally enable interrupts (for the USART_RX handler)
 	//sei();
 
-	int pin = PD1;
-
-	DDRD |= (1 << pin);
-
-	while (1) {
-		//usart_puts("Hello World!\r\n");
-		PORTD |= (1 << pin);
-		//pin_toggle(13); // blink the LED
-
-		_delay_ms(500);
-		
-		PORTD &= ~(1 << pin);
-
-		_delay_ms(500);
-	}
+	led_blink();
 }
