@@ -1,30 +1,27 @@
 
 
-#include "led.h"
+#include "sources/digital_pin.h"
+#include <util/delay.h>      // delay functions
 
-// Pins
-//#define LED 13
-
-/*
-// UART receive handler
-ISR(USART_RX_vect)
-{
-	// "ECHO" function:
-	uint8_t b = usart_rx();
-	usart_tx(b); // send back
-}*/
 
 
 void main()
 {
-	//usart_init(BAUD_115200);
-	//usart_isr_rx_enable(true); // enable RX interrupt handler
 
-	// configure pins
-	//as_output(LED);
+	int pin = 4;
 
-	// globally enable interrupts (for the USART_RX handler)
-	//sei();
+	digital_pin_set_as_output(pin);
 
-	led_blink();
+
+	while(1){
+		digital_pin_set_high(pin);
+		_delay_ms(500);
+		
+		digital_pin_set_low(pin);
+
+		_delay_ms(500);
+
+	}
+	
+	return 0;
 }
