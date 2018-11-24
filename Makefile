@@ -12,7 +12,7 @@ HFUSE = 0xDE
 EFUSE = 0x05
 
 # AVRDUDE settings
-PROG_BAUD = 115200
+PROG_BAUD =  115200
 PROG_DEV  = /dev/ttyACM0
 PROG_TYPE = arduino
 
@@ -27,6 +27,7 @@ BINARY = main
 # Obj files to be built <- add .o for any .c files you add!
 OBJS  = $(BINARY).o
 OBJS += sources/digital_pin.o
+OBJS += sources/interrupt.o
 
 # Pre-defined macros
 DEFS = -DF_CPU=$(F_CPU)UL
