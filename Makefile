@@ -28,6 +28,7 @@ BINARY = main
 OBJS  = $(BINARY).o
 OBJS += sources/digital_pin.o
 OBJS += sources/interrupt.o
+OBJS += sources/uart.o
 
 # Pre-defined macros
 DEFS = -DF_CPU=$(F_CPU)UL
